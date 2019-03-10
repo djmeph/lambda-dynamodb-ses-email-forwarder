@@ -1,0 +1,17 @@
+{
+  "name": "lambda-ses-forwarder",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "exit 0",
+    "build": "npm run build:prepare && npm run build:zip",
+    "build:prepare": "rm -f archive.zip && rm -rf node_modules && npm install --production",
+    "build:zip": "zip -r archive.zip *.js node_modules/*"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "aws-lambda-ses-forwarder": "^4.2.0"
+  }
+}
