@@ -1,5 +1,5 @@
 # AWS SES Lambda Email Forwarder
-## With Environment Variables
+### With Environment Variables
 
 Use 'npm run build' to build archive.zip for upload to S3.
 
