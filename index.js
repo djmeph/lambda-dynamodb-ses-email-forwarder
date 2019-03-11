@@ -1,5 +1,4 @@
-
-var forwarder = require("aws-lambda-ses-forwarder");
+const forwarder = require("aws-lambda-ses-forwarder");
 const { FROM_EMAIL, TO_EMAIL } = process.env;
 
 exports.handler = function (event, context, callback) {
