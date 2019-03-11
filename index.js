@@ -1,12 +1,12 @@
 const forwarder = require("aws-lambda-ses-forwarder");
-const { FROM_EMAIL, TO_EMAIL } = process.env;
+const { FROM_EMAIL, TO_EMAIL, BUCKET_NAME } = process.env;
 
 exports.handler = function (event, context, callback) {
   const overrides = {
     config: {
       fromEmail: FROM_EMAIL,
       subjectPrefix: "",
-      emailBucket: "djmeph-email",
+      emailBucket: BUCKET_NAME,
       emailKeyPrefix: `emails/${FROM_EMAIL}/`,
       forwardMapping: {
         [FROM_EMAIL]: [TO_EMAIL]
